@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/StyleSheet.css' %}" type = "text/css"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profile</title>
+</head>
+<body>
+    <form target="_self">
+       <div id="dash_header" class="container">
+            <section class="headerStyle">
+            	<h1 class="logoStyle">MyTrans</h1>
+            </section>
+            <aside class="asideStyle">
+                <a id="log_out" href="{% url 'logout' %}" class="btn btn-default-header">Log Out</a>
+            </aside>
+        </div>
+        <hr>
+    <div  class="container">
+    <div id ="title">Profile</div>
+    <br>
+  	<table class="table">
+    	<tr>
+        	<td class="table_Lbl"><label>Username:</label></td>
+            <td >
+            	<input id="tbxTrans" name="tbxTransNo" class="form-control" type="text" disabled>
+            </td>
+        </tr>
+        <tr>
+            <td class="table_Lbl"><label>First name:</label></td>
+            <td><input id="tbxDate" type="text" class="form-control" type="text" disabled></td>
+        </tr>
+        <tr>
+        	<td class="table_Lbl"><label>Last name:</label></td>
+            <td><textarea id="txtaDesc"
+            type="text" class="form-control" disabled></textarea></td>
+        </tr>
+        <tr>
+        	<td class="table_Lbl"><label>Email:</label></td>
+            <td><input id="tbxType" class="form-control" type="text" disabled></td>
+        </tr>
+        <tr>
+        	<td class="table_Lbl"><label>Recent transaction:</label></td>
+        </tr>
+
+     <div class="container">
+        <table id="recent_transaction">
+            <thead>
+            {% for item in items%}
+              <tr>
+                  <td title="No." data-type="number">No.</td>
+                  <td>
+                        {{ item.id|capfirst }}
+                  </td>
+              </tr>
+              <tr>
+                  <td title="Description" data-type="date">Description</td>
+                  <td>
+                        {{ item.Trans_Desc|capfirst }}
+                  </td>
+              </tr>
+              <tr>
+                  <td title="Transaction Month" data-type="date">Transaction Month</td>
+                  <td>
+                        {{ item.Trans_Date|capfirst }}
+                  </td>
+              </tr>
+              <tr>
+                  <td title="Type" data-type="string">Type</td>
+                  <td>
+                        {{ item.Trans_Type|capfirst }}
+                   </td>
+              </tr>
+              <tr>
+                  <td title="Location" data-type="string">Location</td>
+                   <td>
+                        {{ item.Trans_Loc|capfirst }}
+                   </td>
+              </tr>
+              <tr>
+                  <td title="Amount" data-type="string">Amount</td>
+                  <td>
+                        {{ item.Trans_Amnt|capfirst }}
+                  </td>
+              </tr>
+            {% endfor %}
+            </thead>
+        </table>
+     </div>
+        <div id="dash_footer">
+
+        </div>
+    <!--<script type="text/javascript" src={% static 'js/Add_Transactions.js' %}></script>-->
+    <!--<script type="text/javascript" src={% static 'js/Dir_JS.js' %}></script>-->
+    <script type="text/javascript" src={% static 'js/HeaderScript.js' %}></script>
+    <script type="text/javascript" src={% static 'js/sort_JS.js' %}></script>
+</body>
+</html>
