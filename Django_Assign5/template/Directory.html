@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="css/StyleSheet.css" rel="stylesheet" />
+    <title></title>
+	<meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Directory</title>
+</head>
+<body>
+    <form target="_self">
+        <div id="dash_header" class="container">
+        	<section class="headerStyle">
+            	<h1 class="logoStyle">MyTrans</h1>
+            </section>
+			<aside class="asideStyle">
+            	<a id="dashboard" href="{% url 'loadItems' %}" class="btn btn-default-header">Dashboard</a>
+                <a id="profile" href="{% url 'profile' %}" class="btn btn-default-header">Profile</a>
+                <a id="log_out" href="{% url 'logout' %}" class="btn btn-default-header">Log Out</a>
+            </aside>
+        </div>
+        <hr>
+        <div class="container">
+          <h3>Recent Transactions</h3>
+
+          <table class="table table-responsive table-hover" id="TransTable">
+            <thead>
+              <tr>
+                <th title="No." data-type="number">No.</th>
+                <th title="Description" data-type="date">Description</th>
+                <th title="Transaction Month" data-type="date">Transaction Month</th>
+                <th title="Type" data-type="string">Type</th>
+                <th title="Location" data-type="string">Location</th>
+              </tr>
+            </thead>
+            <tbody>
+				<tr>
+                </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="dash_footer">
+
+        </div>
+    </form>
+    <script src="js/Add_Transactions.js"></script>
+	<script src="js/Dir_JS.js"></script>
+    <script src="js/HeaderScript.js"></script>
+</body>
+</html>

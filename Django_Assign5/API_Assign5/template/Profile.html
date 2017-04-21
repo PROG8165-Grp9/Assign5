@@ -14,6 +14,8 @@
             	<h1 class="logoStyle">MyTrans</h1>
             </section>
             <aside class="asideStyle">
+                <a id="dashboard" href="{% url 'loadItems' %}" class="btn btn-default-header">Dashboard</a>
+                <a id="profile" href="{% url 'profile' %}" class="btn btn-default-header">Profile</a>
                 <a id="log_out" href="{% url 'logout' %}" class="btn btn-default-header">Log Out</a>
             </aside>
            <hr>
@@ -67,13 +69,14 @@
                   <td></td>
                   <td></td>
               </tr>
-
             </thead>
         </table>
      </div>
         <div id="dash_footer">
-
         </div>
     </div>
+    <script src="js/Add_Transactions.js"></script>
+	<script src="js/Dir_JS.js"></script>
+    <script src="js/HeaderScript.js"></script>
 </body>
 </html>
