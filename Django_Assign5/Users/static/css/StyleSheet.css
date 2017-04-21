@@ -44,15 +44,15 @@ html, #container_1 {
 	height: 50px;
 }
 
-#form_login_group, .form-group {
+#form_login_name,#form_login_password, #form_login_group, .form-group {
     margin-bottom: 20px;
 }
 
-#form_login_group input , #signUp_form input, #log_In, #register, #sign_Up {
+#form_login_name input,#form_login_password input, #form_login_group input , #signUp_form input, #log_In, #register, #sign_Up {
     height: 50px;
 }
 
-#form_login_group input {
+#form_login_name input,#form_login_password input,#form_login_group input {
     text-align: center;
     background-color: #ECF0F1;
     border: 2px solid transparent;
@@ -91,7 +91,7 @@ html, #container_1 {
     border: 0px solid transparent;
 }
 
-#form_login_group input:focus , #signUp_form input:focus {
+#form_login_name input:focus , #form_login_password input:focus, #form_login_group input:focus#signUp_form input:focus {
     box-shadow: 0 0 5px rgba(81, 203, 238, 1);
     padding: 3px 0px 3px 3px;
     margin: 5px 1px 3px 0px;
@@ -106,6 +106,7 @@ html, #container_1 {
 
 #register {
     background: #45D158;
+    vertical-align: middle;
 }
 
 #log_In, #register {
@@ -141,34 +142,11 @@ html, #container_1 {
     background-color: #2980B9;
 }
 
+/*Profile styles*/
 
-/*Dashboard styles*/
-
-/*Transaction details styles*/
-#dash_container {
-    position: center;
-}
-
-#container_trans {
-	margin-left:auto;
-	margin-right:auto;
-	width:80%;
-}
 #title {
 	color: #036;
 	font-size : 25px;
-}
-
-#date {
-	background:#dddddd;
-}
-
-#type {
-	background:#dddddd;
-}
-
-#value {
-	background:#dddddd;
 }
 
 td.table_Lbl
@@ -233,11 +211,51 @@ section.headerStyle
 	display:table-cell;
 }
 
-
 #log_out{
+    font-family: SansSerif;
     float: right;
     text-decoration: none;
+    margin-bottom: 50px;
 }
+
 #recent_transaction{
+    border-collapse:collapse;
     margin-left: 20%;
+    margin-right: 10%;
+}
+
+#recent_transaction tr td{
+    border-bottom:1px solid #dedede;
+}
+
+#recent_transaction td{
+    width: 20%;
+    border-bottom:1px solid #dedede;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#Profile_Detail{
+    border-collapse:collapse;
+    width: 100%;
+}
+
+#Profile_Detail tr td{
+    border-bottom:1px solid #dedede;
+}
+
+#Profile_Detail input{
+    border: 0px;
+    text-align: center;
+    background-color: #ECF0F1;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: 200;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#Profile_Detail label{
+    font-size: 16px;
+    font-weight: bold;
 }
