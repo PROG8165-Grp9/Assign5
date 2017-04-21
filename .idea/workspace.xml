@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dff85ba1-16b5-44ce-921e-a1a1df295a5a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Django_Assign5/API_Assign5/API_Assign5/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Django_Assign5/API_Assign5/API_Assign5/settings.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Django_Assign5/API_Assign5/API_Assign5/urls.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Django_Assign5/API_Assign5/API_Assign5/wsgi.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Django_Assign5/API_Assign5/db.sqlite3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Django_Assign5/API_Assign5/manage.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Django_Assign5/static/js/LogIn_JS.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Django_Assign5/static/js/SignUp_JS.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Django_Assign5/template/LogIn.html" afterPath="$PROJECT_DIR$/Django_Assign5/API_Assign5/template/LogIn.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Django_Assign5/template/Profile.html" afterPath="$PROJECT_DIR$/Django_Assign5/API_Assign5/template/Profile.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Django_Assign5/template/SignUp.html" afterPath="$PROJECT_DIR$/Django_Assign5/API_Assign5/template/SignUp.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Assign5.iml" afterPath="$PROJECT_DIR$/.idea/Assign5.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="dff85ba1-16b5-44ce-921e-a1a1df295a5a" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
