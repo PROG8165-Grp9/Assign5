@@ -211,9 +211,8 @@ section.headerStyle
 	display:table-cell;
 }
 
-#log_out{
+#log_out, #profile, #dashboard{
     font-family: SansSerif;
-    float: right;
     text-decoration: none;
     margin-bottom: 50px;
 }
