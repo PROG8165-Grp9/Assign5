@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class ProfileConfig(AppConfig):
-    name = 'Profile'
+class UsersConfig(AppConfig):
+    name = 'Users'
