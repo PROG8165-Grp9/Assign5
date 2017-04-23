@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import login, authenticate
-# Create your views here.
 from Users.forms import UserForm
 
 def signup(request):
@@ -18,3 +17,9 @@ def signup(request):
         form = UserForm()
     return render(request, 'API/SignUp.html', {'form': form})
 
+
+def login(request):
+    return render(request, 'API/Login.html')
+
+def loadItems(request):
+    return render(request,'API/Directory.html',)

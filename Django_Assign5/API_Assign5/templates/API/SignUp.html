@@ -14,44 +14,44 @@
 
 
                 <form name="registration" method="POST" target="_self" id="signUp_form" onsubmit="return (validateForm(this));">
-                    <div class="form-group">
-                        <label>Enter your email:</label>
-                        <input type="text" name ="email" class="form-control login-field" id="form_email" placeholder="Email" required>
-                        <label id="emailLable"></label>
-                    </div>
+
 
                     <div class="form-group">
-                        <label>First name:</label>
-                        <input type="text" name ="fname" class="form-control" id="form_firstname" placeholder="First name" required>
+                        <label>First name:</label><br>
+                        <input type="text" name ="fname" class="form-control" id="form_firstname" placeholder="" required>
                         <label id="fnameLable"></label>
                     </div>
 
                     <div class="form-group">
-                        <label>Last name:</label>
-                        <input type="text" name ="lname" class="form-control" id="form_lastname" placeholder="Last name" required>
+                        <label>Last name:</label><br>
+                        <input type="text" name ="lname" class="form-control" id="form_lastname" placeholder="" required>
                         <label id="lnameLable"></label>
                     </div>
-
+                    <div class="form-group">
+                        <label>Enter your email:</label><br>
+                        <input type="text" name ="email" class="form-control login-field" id="form_email" placeholder="" required>
+                        <label id="emailLable"></label>
+                    </div>
                      <div class="form-group">
-                        <label>Enter your username:</label>
-                        <input type="text" name ="username" class="form-control" id="form_username" placeholder="Username" required>
+                        <label>Enter your username:</label><br>
+                        <input type="text" name ="username" class="form-control" id="form_username" placeholder="" required>
                         <label id="usernameLable"></label>
                     </div>
 
                     <div class="form-group">
-                        <label>Password:</label>
-                        <input type="password" name ="password" class="form-control" id="form_password1" placeholder="Password" required>
+                        <label>Password:</label><br>
+                        <input type="password" name ="password" class="form-control" id="form_password1" placeholder="" required>
                         <label id="passwordLable1"></label>
                     </div>
 
                     <div class="form-group">
-                        <label>Password confirmation:</label>
-                        <input type="password" name ="password" class="form-control" id="form_password2" placeholder="Password" required>
+                        <label>Password confirmation:</label><br>
+                        <input type="password" name ="password" class="form-control" id="form_password2" placeholder="" required>
                         <label id="passwordLable2"></label>
                     </div>
 
 
-                        <button type="submit" class="btn btn-primary btn-lg btn-block login-button" id="sign_Up">Sign Up</button>
+                        <button type="submit" class="btn btn-primary btn-lg btn-block login-button" id="sign_Up"  href="{% url 'login' %}">Sign Up</button>
                 </form>
 
 
@@ -59,6 +59,6 @@
         </div><!--End of container-->
         <div id="footer">
         </div><!--End of footer-->
-        <script type="text/javascript" src="js/SignUp_JS.js"></script>
+        <script type="text/javascript" src="{% static 'js/SignUp_JS.js' %}"></script>
 </body>
 </html>

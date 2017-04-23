@@ -11,37 +11,44 @@
 <body>
     <div id="header">
     </div><!--End of header-->
+	
+	
         <div id="container">
-		<div id="login_Container" class="center-block">
+			<div id="login_Container" class="center-block">
 
-			<div id="login_form">
-				<h1>Login</h1>
+				<div id="login_form">
+					<h1>Login</h1>
 
-                <!--<form action="Directory.html" method="get" target="_self" id="logIn">-->
-                <form autocomplete="off"
-                      method="post" action="{% url 'login' %}" onSubmit="return validate(this);" name="form" target="_self" id="logIn">
+					<form autocomplete="off"
+                      method="post" action="" onSubmit="return validate(this);" name="form" target="_self" id="logIn">
+
+						<div id="form_login_name">
+							<input type="text" class="login-field"  name = "username" placeholder="username" id="login_name" required>
+							<label id="usernameLable"></label>
+						</div>
+
+						<div id="form_login_password">
+							<input type="password" class="login-field"  name = "password" placeholder="password" id="login_password" required>
+							<label id="passwordLable"></label>
+						</div>
+
+						<div id="form_login_group">
+							<button type="submit" id="log_In" class="btn btn-primary btn-large btn-block">Log in</button>
+						</div>
 
 
-				<div id="form_login_username">
-				<input type="text" class="login-field"  name = "username" placeholder="username" id="login_name" required>
-				<label id="usernameLable"></label>
+
+
+						<a id="register" class="btn btn-primary btn-large btn-block" href="{% url 'signup' %}">Sign Up</a>
+					</form>
 				</div>
-
-				<div id="form_login_password">
-				<input type="password" class="login-field"  name = "password" placeholder="password" id="login_password" required>
-				<label id="passwordLable"></label>
-				</div>
-
-                <div id="form_login_group">
-                    <button type="submit" id="log_In" class="btn btn-primary btn-large btn-block">Log in</button>
-				</div>
-                    <a id="register" class="btn btn-primary btn-large btn-block" action="{% url 'register' %}">Sign Up</a>
-                </form>
-			</div>
-            </div>
+           </div>
 		</div>
+		
     <div id="footer">
     </div><!--End of footer-->
-	<script type="text/javascript" src="js/LogIn_JS.js"></script>
+	
+	
+	<script type="text/javascript" src="{% static 'js/LogIn_JS.js' %}"></script>
 </body>
 </html>

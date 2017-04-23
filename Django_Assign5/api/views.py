@@ -44,7 +44,8 @@ class CreateTransaction(generics.ListCreateAPIView):
     """This class defines the create behavior of our rest api."""
     queryset = Transactions.objects.all()
     serializer_class = TransactionsSerializer
-    permission_classes = (permissions.IsAuthenticated,)
+    #permission_classes = (permissions.IsAuthenticated,)
+
 
     def perform_create(self, serializer):
         """Save the post data when creating a new bucketlist."""
@@ -55,9 +56,10 @@ class TransactionDetailsView(generics.ListAPIView):
 
     queryset = Transactions.objects.all()
     serializer_class = TransactionsSerializer
-    permission_classes = (
-        permissions.IsAuthenticated,
-        IsOwner)
+
+    #permission_classes = (
+        #permissions.IsAuthenticated,
+        #IsOwner)
 
 
 class CreateCategory(generics.ListCreateAPIView):

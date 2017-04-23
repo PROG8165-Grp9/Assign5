@@ -44,11 +44,11 @@ html, #container_1 {
 	height: 50px;
 }
 
-#form_login_name,#form_login_password, #form_login_group, .form-group {
+#form_login_name, #form_login_password, #form_login_group, .form-group {
     margin-bottom: 20px;
 }
 
-#form_login_name input,#form_login_password input, #form_login_group input , #signUp_form input, #log_In, #register, #sign_Up {
+#form_login_name input, #form_login_password input, #form_login_group input , #signUp_form input, #log_In, #register, #sign_Up {
     height: 50px;
 }
 
@@ -75,23 +75,29 @@ html, #container_1 {
     text-align: left;
 }
 
+
+
+
 #signUp_form input {
-    border: 0px;
     text-align: center;
     background-color: #ECF0F1;
+    border: 2px solid transparent;
     border-radius: 3px;
     font-size: 16px;
     font-weight: 200;
+    padding: 10px 0;
+    width: 100%;
     -webkit-transition: all 0.1s ease-in-out;
     -moz-transition: all 0.1s ease-in-out;
     -ms-transition: all 0.1s ease-in-out;
     -o-transition: all 0.1s ease-in-out;
     outline: none;
+    padding: 3px 0px 3px 3px;
     margin: 5px 1px 3px 0px;
     border: 0px solid transparent;
 }
 
-#form_login_name input:focus , #form_login_password input:focus, #form_login_group input:focus#signUp_form input:focus {
+#form_login_name input:focus , #form_login_password input:focus, #form_login_group input:focus, #signUp_form input:focus {
     box-shadow: 0 0 5px rgba(81, 203, 238, 1);
     padding: 3px 0px 3px 3px;
     margin: 5px 1px 3px 0px;
@@ -126,7 +132,7 @@ html, #container_1 {
     border: 0px solid transparent;
     background: #45D158;
     width: 60%;
-    line-height: 25px;
+    line-height: 15px;
     padding: 10px 0;
     border-radius: 3px;
     transition: 0.25s;
@@ -135,7 +141,7 @@ html, #container_1 {
     text-decoration: none;
     color: #ffffff;
     font-size: 16px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 #log_In:hover, #register:hover, #sign_Up:hover {
