@@ -1,17 +1,50 @@
 from django.shortcuts import render
 from rest_framework import generics
-from .serializers import TransactionsSerializer, CategorySerializer, UserSerializer
+from .serializers import TransactionsSerializer, CategorySerializer, UserSerializer, UserCreateSerializer, UserLoginSerializer
 from .models import Transactions, Category, User
 from .permissions import IsOwner
+
 from rest_framework import permissions
+from rest_framework.permissions import (
+    AllowAny,
+    IsAuthenticated,
+    IsAdminUser,
+    IsAuthenticatedOrReadOnly,
+
+    )
+from rest_framework.response import Response
+from rest_framework.status import HTTP_200_OK, HTTP_400_BAD_REQUEST
+from rest_framework.views import APIView
+from django.contrib.auth import get_user_model
+
+User = get_user_model()
+
+class UserCreateView(generics.ListCreateAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserCreateSerializer
+
+class UserLoginView(APIView):
+    permission_classes = [AllowAny]
+    serializer_class = UserLoginSerializer
+
+
+    def post(self, request, *args, **kwargs):
+        data = request.data
+        serializer = UserLoginSerializer(data = data)
+        if serializer.is_valid(raise_exception=True):
+            new_data = serializer.data
+            return Response(new_data, status = HTTP_200_OK)
+        return Response(serializer.errors, status = HTTP_400_BAD_REQUEST)
+    def redirect(request):
+        return render(request, 'API/LogIn.html', {'form': form})
+
+
 
 class CreateTransaction(generics.ListCreateAPIView):
     """This class defines the create behavior of our rest api."""
     queryset = Transactions.objects.all()
     serializer_class = TransactionsSerializer
     permission_classes = (permissions.IsAuthenticated,)
-    permission_classes = (
-        permissions.IsAuthenticated, IsOwner)
 
     def perform_create(self, serializer):
         """Save the post data when creating a new bucketlist."""

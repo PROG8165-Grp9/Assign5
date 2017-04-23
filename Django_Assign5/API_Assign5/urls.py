@@ -20,6 +20,5 @@ from Users import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^signup/$', views.signup, name='signup'),
     url(r'^', include('api.urls')),
 ]

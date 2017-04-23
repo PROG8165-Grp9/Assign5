@@ -44,12 +44,19 @@ INSTALLED_APPS = [
 ]
 
 REST_FRAMEWORK = {
+    #'DEFAULT_RENDERER_CLASSES': (
+       # 'rest_framework.renderers.JSONRenderer',
+    #),
+    #'DEFAULT_PARSER_CLASSES': (
+       # 'rest_framework.parsers.JSONParser',
+   # ),
     'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.IsAuthenticated',
+       # 'rest_framework.permissions.IsAuthenticated',
     ),
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework.authentication.BasicAuthentication',
-        'rest_framework.authentication.TokenAuthentication',
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+        #'rest_framework.authentication.SessionAuthentication',
+        #'rest_framework.authentication.TokenAuthentication',
     )
 }
 
@@ -108,7 +115,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/

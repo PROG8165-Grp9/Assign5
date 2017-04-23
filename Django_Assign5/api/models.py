@@ -17,15 +17,6 @@ class Transactions(models.Model):
     Trans_Type = models.CharField(max_length=50)
     Trans_Loc = models.CharField(max_length=150)
     Trans_Amnt = models.DecimalField(decimal_places=2, max_digits=150, default=0)
-    def __str__(self):
-        """Return a human readable representation of the model instance."""
-        return "{}".format(self.name)
-
-# This receiver handles token creation immediately a new user is created.
-@receiver(post_save, sender=User)
-def create_auth_token(sender, instance=None, created=False, **kwargs):
-    if created:
-        Token.objects.create(user=instance)
 
 class Category(models.Model):
     Cate_Type = models.CharField(max_length=50)
